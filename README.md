@@ -7,3 +7,10 @@ At the moment we have:
 * Expo-HTML-Elements
 
 The aim of this project is to see exactly what expo bare minimum can do.
+
+## Installation
+
+* Clone the repository
+* Run `yarn`
+* Run `npx pod-install`
+* Run `npx expo start` to then pick what device to use.
