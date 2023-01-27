@@ -9,14 +9,8 @@ const Details = ({ navigation }) => {
   ];
   return (
     <View style={styles.container}>
-      <H2
-        onPress={() => {
-          navigation.goBack();
-        }}
-      >
-        Banking
-      </H2>
       <FlatList
+        style={{ margin: 20 }}
         data={data}
         renderItem={({ item }) => {
           return (
