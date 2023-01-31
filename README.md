@@ -1,6 +1,6 @@
 # Expo Bare Minimum Project
 
-This project uses the bare minimum workflow and has some expo packages imported.
+This project uses the bare minimum workflow and has some expo packages & other libraries imported.
 
 At the moment we have:
 
@@ -8,6 +8,8 @@ At the moment we have:
 - Expo-HTML-Elements
 - Expo-Local-Authentication
 - Expo Native Modules (both functions & views)
+- Detox
+- Jest
 
 The aim of this project is to see exactly what expo bare minimum can do.
 
@@ -40,6 +42,6 @@ Follow these steps if the app doesn't build with the Native Modules after a yarn
 To run Detox tests simply open two terminals in the root folder. Then:
 
 - Run `npx expo run:ios`
-- Run `detox test --configuration ios.sim.debug`
+- Run `npm run detox-ios-debug`. This script then runs all ios scripts in a debug environment and stores any failing tests as screenshots in `./artifacts/ios-debug`. The same works for release. `npm run detox-ios-release`.
 
 **Note: Ensure iPhone 14 Pro simulator is open, the detoxrc is expecting this device for iOS**

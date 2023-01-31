@@ -61,10 +61,16 @@ module.exports = {
     "ios.sim.debug": {
       device: "simulator",
       app: "ios.debug",
+      artifacts: {
+        rootDir: ".artifacts/ios-debug",
+      },
     },
     "ios.sim.release": {
       device: "simulator",
       app: "ios.release",
+      artifacts: {
+        rootDir: ".artifacts/ios-release",
+      },
     },
     "android.att.debug": {
       device: "attached",

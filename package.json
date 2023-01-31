@@ -6,7 +6,9 @@
     "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "detox-ios-debug": "detox test --configuration ios.sim.debug --take-screenshots failing",
+    "detox-ios-release": "detox test --configuration ios.sim.release --take-screenshots failing"
   },
   "overrides": {
     "metro": "0.73.7",
