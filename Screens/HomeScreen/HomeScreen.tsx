@@ -6,6 +6,8 @@ import { P } from "@expo/html-elements";
 import * as LocalAuthentication from "expo-local-authentication";
 import { useEffect, useState } from "react";
 
+// This example shows Expo-Router links and also Expo-local-authentication working
+
 const Home = () => {
   const [isBiometricSupported, setIsBiometricSupported] =
     useState<boolean>(false);
@@ -32,11 +34,25 @@ const Home = () => {
   return (
     <View style={defaultStyles.container}>
       {isAuthenticated ? (
-        <Link href="/banking/Account">
-          <View style={styles.button}>
-            <P style={styles.buttonText}>Go to Bank</P>
-          </View>
-        </Link>
+        <>
+          <Link href="/banking/Account">
+            <View style={styles.button}>
+              <P style={styles.buttonText}>Go to Bank</P>
+            </View>
+          </Link>
+          <View style={{ margin: 5 }} />
+          <Link href="/theming/NativeFunctions">
+            <View style={[styles.button, { backgroundColor: "red" }]}>
+              <P style={styles.buttonText}>Go to Native Module</P>
+            </View>
+          </Link>
+          <View style={{ margin: 5 }} />
+          <Link href="/web/ExpoSearch">
+            <View style={[styles.button, { backgroundColor: "blue" }]}>
+              <P style={styles.buttonText}>Go to Native Web View</P>
+            </View>
+          </Link>
+        </>
       ) : (
         <Button onPress={onAuthenticate} title="Login" />
       )}

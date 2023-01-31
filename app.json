@@ -9,6 +9,9 @@
     "scheme": "myapp",
     "web": {
       "bundler": "metro"
+    },
+    "ios": {
+      "bundleIdentifier": "org.name.ExpoBare"
     }
   }
 }

@@ -1,4 +1,4 @@
-import HomeScreen from "../components/HomeScreen/HomeScreen";
+import HomeScreen from "../Screens/HomeScreen/HomeScreen";
 
 const Index = () => <HomeScreen />;
 
