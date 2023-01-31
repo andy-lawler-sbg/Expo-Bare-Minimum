@@ -13,6 +13,4 @@ describe("HomeScreen", () => {
       element(by.text("Please login by pressing the button below"))
     ).toBeVisible();
   });
-
-  it("should show auth screen on login tap", async () => {});
 });
