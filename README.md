@@ -21,7 +21,7 @@ The aim of this project is to see exactly what expo bare minimum can do.
 - Run `npx pod-install`
 - Run `npx expo start` to then pick what device to use.
 
-** Note: If the app doesn't build, you may need to link the Native Modules again. Follow the linking instructions below **
+**Note: If the app doesn't build, you may need to link the Native Modules again. Follow the linking instructions below**
 
 ## Linking
 
@@ -34,3 +34,12 @@ Follow these steps if the app doesn't build with the Native Modules after a yarn
   expo-web-view
   expo-settings
 - Link the module by going into each module folder and run `npm link`. Then in the `ExpoBare` folder run `npm link module_name` eg: npm link expo-web-view. Then inside ExpoBare run `yarn` again.
+
+## Testing
+
+To run Detox tests simply open two terminals in the root folder. Then:
+
+- Run `npx expo run:ios`
+- Run `detox test --configuration ios.sim.debug`
+
+**Note: Ensure iPhone 14 Pro simulator is open, the detoxrc is expecting this device for iOS**
