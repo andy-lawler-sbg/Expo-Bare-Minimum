@@ -1,10 +1,6 @@
 import { WebView as NativeWebView } from "expo-web-view";
 import styles from "./WebView.styles";
-
-type WebViewProps = {
-  url: string;
-  setLoading: () => void;
-};
+import { WebViewProps } from "./WebView.types";
 
 const WebView = ({ url, setLoading }: WebViewProps) => (
   <NativeWebView

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { TextInput, View } from "react-native";
+
 import WebView from "../../components/WebView/WebView";
 import LoadingView from "../../components/LoadingView/LoadingView";
+
 import styles from "./NativeWebView.styles";
 
 // This example shows an Expo Module with a Native View working

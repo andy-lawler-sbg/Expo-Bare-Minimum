@@ -1,16 +1,14 @@
+import { useEffect, useState } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Link } from "expo-router";
-import { styles as defaultStyles } from "../../utils";
-import styles from "./HomeScreen.styles";
 import { H5, P } from "@expo/html-elements";
 import * as LocalAuthentication from "expo-local-authentication";
-import { useEffect, useState } from "react";
+
+import { styles as defaultStyles } from "../../utils";
+import styles from "./HomeScreen.styles";
+import { HomeScreenProps } from "./HomeScreen.types";
 
 // This example shows Expo-Router links and also Expo-local-authentication working
-
-type HomeScreenProps = {
-  didLogin: () => void;
-};
 
 const Home = ({ didLogin }: HomeScreenProps) => {
   const [isBiometricSupported, setIsBiometricSupported] =

@@ -1,5 +1,6 @@
 import { View, FlatList } from "react-native";
 import { H2, P } from "@expo/html-elements";
+
 import { styles } from "../../utils";
 
 // This example shows Expo-HTML-Elements working in a bare workflow app
