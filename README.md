@@ -17,8 +17,8 @@ The aim of this project is to see exactly what expo bare minimum can do.
 
 - Clone the repository
 - You will also need access to the Native Modules repo's to build this. They are private so request access:
-  https://github.com/andy-lawler-sbg/expo-web-view
-  https://github.com/andy-lawler-sbg/expo-settings
+  - https://github.com/andy-lawler-sbg/expo-web-view
+  - https://github.com/andy-lawler-sbg/expo-settings
 - Run `yarn`
 - Run `npx pod-install`
 - Run `npx expo start` to then pick what device to use.
