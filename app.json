@@ -11,7 +11,7 @@
       "bundler": "metro"
     },
     "ios": {
-      "bundleIdentifier": "org.name.ExpoBare"
+      "bundleIdentifier": "org.name.ExpoBare",
     }
   }
 }

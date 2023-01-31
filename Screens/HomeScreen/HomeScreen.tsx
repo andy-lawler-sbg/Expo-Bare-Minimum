@@ -60,7 +60,7 @@ const Home = ({ didLogin }: HomeScreenProps) => {
       ) : (
         <>
           <H5>Please login by pressing the button below</H5>
-          <TouchableOpacity onPress={onAuthenticate}>
+          <TouchableOpacity onPress={onAuthenticate} testID="LoginButton">
             <View style={styles.buttonContainer}>
               <P style={styles.buttonText}>Login</P>
             </View>
