@@ -7,7 +7,7 @@ import styles from "./NativeWebView.styles";
 // This example shows an Expo Module with a Native View working
 
 const NativeWebView = () => {
-  const [inputUrl, setInputUrl] = useState("https://docs.expo.dev/modules/");
+  const [inputUrl, setInputUrl] = useState("https://m.skybet.com");
   const [url, setUrl] = useState(inputUrl);
   const [isLoading, setIsLoading] = useState(true);
 
