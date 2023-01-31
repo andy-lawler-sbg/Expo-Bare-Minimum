@@ -1,6 +1,6 @@
 import * as Settings from "expo-settings";
 import { useState, useEffect } from "react";
-import { Button, Text, View, StyleSheet } from "react-native";
+import { Button, Text, View } from "react-native";
 import styles from "./NativeSystemTheme.styles";
 
 // This example shows an Expo Module with Native Functions working

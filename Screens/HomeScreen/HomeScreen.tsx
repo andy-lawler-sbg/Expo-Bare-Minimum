@@ -1,6 +1,6 @@
-import { View, TouchableOpacity, Text } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { Link } from "expo-router";
-import defaultStyles from "../../utils/GenericStyling";
+import { styles as defaultStyles } from "../../utils";
 import styles from "./HomeScreen.styles";
 import { H5, P } from "@expo/html-elements";
 import * as LocalAuthentication from "expo-local-authentication";

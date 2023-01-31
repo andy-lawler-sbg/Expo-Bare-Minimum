@@ -1,6 +1,6 @@
-import { View, Text, FlatList } from "react-native";
-import styles from "../../utils/GenericStyling";
-import { H1, H2, P } from "@expo/html-elements";
+import { View, FlatList } from "react-native";
+import { H2, P } from "@expo/html-elements";
+import { styles } from "../../utils";
 
 // This example shows Expo-HTML-Elements working in a bare workflow app
 
