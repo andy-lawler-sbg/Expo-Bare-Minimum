@@ -12,7 +12,7 @@ describe("Banking", () => {
   });
 
   it("should show transactions text", async () => {
-    await expect(element(by.text("Transactionsx"))).toBeVisible();
+    await expect(element(by.text("Transactions"))).toBeVisible();
 
     await expect(element(by.text("1: $10"))).toBeVisible();
     await expect(element(by.text("2: $20"))).toBeVisible();
