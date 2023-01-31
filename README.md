@@ -7,6 +7,7 @@ At the moment we have:
 - Expo-Router
 - Expo-HTML-Elements
 - Expo-Local-Authentication
+- Expo Native Modules (both functions & views)
 
 The aim of this project is to see exactly what expo bare minimum can do.
 
