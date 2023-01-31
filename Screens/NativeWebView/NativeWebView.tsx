@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  ActivityIndicator,
-  Platform,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { TextInput, View } from "react-native";
 import WebView from "../../components/WebView/WebView";
 import LoadingView from "../../components/LoadingView/LoadingView";
 import styles from "./NativeWebView.styles";

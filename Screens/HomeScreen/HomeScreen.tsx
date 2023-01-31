@@ -1,14 +1,18 @@
-import { View, Button, Text } from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
 import { Link } from "expo-router";
 import defaultStyles from "../../utils/GenericStyling";
 import styles from "./HomeScreen.styles";
-import { P } from "@expo/html-elements";
+import { H5, P } from "@expo/html-elements";
 import * as LocalAuthentication from "expo-local-authentication";
 import { useEffect, useState } from "react";
 
 // This example shows Expo-Router links and also Expo-local-authentication working
 
-const Home = () => {
+type HomeScreenProps = {
+  didLogin: () => void;
+};
+
+const Home = ({ didLogin }: HomeScreenProps) => {
   const [isBiometricSupported, setIsBiometricSupported] =
     useState<boolean>(false);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -27,7 +31,7 @@ const Home = () => {
     });
     auth.then((result) => {
       setIsAuthenticated(result.success);
-      console.log(result);
+      didLogin();
     });
   };
 
@@ -54,7 +58,14 @@ const Home = () => {
           </Link>
         </>
       ) : (
-        <Button onPress={onAuthenticate} title="Login" />
+        <>
+          <H5>Please login by pressing the button below</H5>
+          <TouchableOpacity onPress={onAuthenticate}>
+            <View style={styles.buttonContainer}>
+              <P style={styles.buttonText}>Login</P>
+            </View>
+          </TouchableOpacity>
+        </>
       )}
     </View>
   );

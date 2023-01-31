@@ -11,5 +11,13 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: "white",
+    fontWeight: "bold",
+    marginVertical: 0,
+  },
+  buttonContainer: {
+    backgroundColor: "blue",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 20,
   },
 });

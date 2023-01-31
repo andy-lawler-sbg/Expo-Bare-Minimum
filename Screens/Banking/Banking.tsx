@@ -11,7 +11,6 @@ const Banking = () => {
   ];
   return (
     <View style={styles.container}>
-      <H1> Welcome to my bank</H1>
       <H2>Transactions</H2>
       <FlatList
         style={{ margin: 20 }}
