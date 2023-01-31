@@ -15,9 +15,12 @@ const NativeWebView = () => {
 
   const setLoadingState = () => setIsLoading(false);
 
+  const testID = "NativeWebView";
+
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID={testID}>
       <TextInput
+        testID={`${testID}.textInput`}
         value={inputUrl}
         onChangeText={setInputUrl}
         returnKeyType="go"
