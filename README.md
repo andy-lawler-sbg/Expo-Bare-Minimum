@@ -41,7 +41,7 @@ Follow these steps if the app doesn't build with the Native Modules after a yarn
 
 To run Detox tests simply open two terminals in the root folder. Then:
 
-- Run `npx expo run:ios`
-- Run `npm run detox-ios-debug`. This script then runs all ios scripts in a debug environment and stores any failing tests as screenshots in `./artifacts/ios-debug`. The same works for release. `npm run detox-ios-release`.
+- Run `npx expo run:ios` in one terminal to start the app.
+- Run `npm run detox-ios-debug` in the other terminal. This script then runs all ios scripts in a debug environment and stores any failing tests as screenshots in `./artifacts/ios-debug`. The same works for release. `npm run detox-ios-release`.
 
 **Note: Ensure iPhone 14 Pro simulator is open, the detoxrc is expecting this device for iOS**
