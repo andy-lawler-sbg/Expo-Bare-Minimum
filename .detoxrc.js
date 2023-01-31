@@ -75,18 +75,30 @@ module.exports = {
     "android.att.debug": {
       device: "attached",
       app: "android.debug",
+      artifacts: {
+        rootDir: "artifacts/android-att-debug",
+      },
     },
     "android.att.release": {
       device: "attached",
       app: "android.release",
+      artifacts: {
+        rootDir: "artifacts/android-att-release",
+      },
     },
     "android.emu.debug": {
       device: "emulator",
       app: "android.debug",
+      artifacts: {
+        rootDir: "artifacts/android-emu-debug",
+      },
     },
     "android.emu.release": {
       device: "emulator",
       app: "android.release",
+      artifacts: {
+        rootDir: "artifacts/android-emu-release",
+      },
     },
   },
 };
