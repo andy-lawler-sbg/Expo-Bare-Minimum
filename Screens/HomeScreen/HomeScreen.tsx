@@ -37,19 +37,19 @@ const Home = ({ didLogin }: HomeScreenProps) => {
     <View style={defaultStyles.container}>
       {isAuthenticated || Platform.OS === "android" ? (
         <>
-          <Link href="/banking/Account">
+          <Link href="/banking/Account" testID="AccountButton">
             <View style={styles.button}>
               <P style={styles.buttonText}>Go to Bank</P>
             </View>
           </Link>
           <View style={{ margin: 5 }} />
-          <Link href="/theming/NativeFunctions">
+          <Link href="/theming/NativeFunctions" testID="NativeFunctionsButton">
             <View style={[styles.button, { backgroundColor: "red" }]}>
               <P style={styles.buttonText}>Go to Native Module</P>
             </View>
           </Link>
           <View style={{ margin: 5 }} />
-          <Link href="/web/ExpoSearch">
+          <Link href="/web/ExpoSearch" testID="ExpoSearchButton">
             <View style={[styles.button, { backgroundColor: "blue" }]}>
               <P style={styles.buttonText}>Go to Native Web View</P>
             </View>
