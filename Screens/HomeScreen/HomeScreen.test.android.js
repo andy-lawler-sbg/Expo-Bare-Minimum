@@ -1,5 +1,3 @@
-import { Platform } from "react-native";
-
 describe("HomeScreen", () => {
   beforeAll(async () => {
     await device.launchApp();
