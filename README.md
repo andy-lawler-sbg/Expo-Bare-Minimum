@@ -10,6 +10,7 @@ At the moment we have:
 - Expo Native Modules (both functions & views)
 - Detox
 - Jest
+- Typescript
 
 The aim of this project is to see exactly what expo bare minimum can do.
 
@@ -45,3 +46,18 @@ To run Detox tests simply open two terminals in the root folder. Then:
 - Run `npm run detox-ios-debug` in the other terminal. This script then runs all ios scripts in a debug environment and stores any failing tests as screenshots in `./artifacts/ios-debug`. The same works for release. `npm run detox-ios-release` and also for android eg: `npm run detox-android-debug` etc...
 
 **Note: If you have different Simulators/AVD setup edit the .detoxrc file to specify that. Currently we expect iPhone 14 Pro & Pixel 4 to be open.**
+
+## File Naming
+
+- To get testing to work we have speific jest configs for android/ios which we then use when we run the npm scripts. These configs allow us to name tests as `[filename].test.ios.ts` or `[filename].test.android.ts` or even `[filename].test.native.ts`.
+- To test the entire app before a PR you should:
+  - Follow the steps in testing above but for both platforms.
+    - eg: Run `npx expo run:ios` then `npm run detox-ios-debug` then press `a` to launch Android then run `npm run detox-android-debug`.
+    - This approach will run all iOS tests on a iOS simulator, all android tests on an AVD and also will run the shared tests on both devices also.
+
+## Routing
+
+- Since we use Expo-Router, to test we must route to the screen we want before we perform any assertions. To do this do the following:
+  - if on an iOS specific test, in `beforeEach` use `openURL({ url: "myapp://[route]})` route being the page you want to navigate to.
+    - Be sure to add a `beforeAll` with the default `launchApp()` comamnd to launch the simulator.
+- if on a native test (both platforms) or Android specific test instead in `beforeAll` use `launchApp({ url: "myapp://[route]})`. This is due to `openURL({ url: url })` causing issues on Android.
