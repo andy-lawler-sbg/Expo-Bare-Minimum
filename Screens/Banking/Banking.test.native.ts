@@ -1,3 +1,5 @@
+import { by, device, expect, element } from "detox";
+
 describe("Banking", () => {
   beforeEach(async () => {
     await device.launchApp({

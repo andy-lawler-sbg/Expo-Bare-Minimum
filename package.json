@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@types/jest": "^29.4.0",
     "detox": "^20.1.2",
     "jest": "^29"
   },

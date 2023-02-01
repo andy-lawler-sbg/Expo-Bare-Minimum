@@ -1,3 +1,5 @@
+import { by, device, expect, element } from "detox";
+
 describe("HomeScreen", () => {
   beforeAll(async () => {
     await device.launchApp();

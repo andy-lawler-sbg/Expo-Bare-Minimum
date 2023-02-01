@@ -68,12 +68,22 @@ module.exports = {
       artifacts: {
         rootDir: "artifacts/ios-debug",
       },
+      testRunner: {
+        args: {
+          config: "e2e/jest.ios.config.js",
+        },
+      },
     },
     "ios.sim.release": {
       device: "simulator",
       app: "ios.release",
       artifacts: {
         rootDir: "artifacts/ios-release",
+      },
+      testRunner: {
+        args: {
+          config: "e2e/jest.ios.config.js",
+        },
       },
     },
     "android.att.debug": {
@@ -82,12 +92,22 @@ module.exports = {
       artifacts: {
         rootDir: "artifacts/android-att-debug",
       },
+      testRunner: {
+        args: {
+          config: "e2e/jest.android.config.js",
+        },
+      },
     },
     "android.att.release": {
       device: "attached",
       app: "android.release",
       artifacts: {
         rootDir: "artifacts/android-att-release",
+      },
+      testRunner: {
+        args: {
+          config: "e2e/jest.android.config.js",
+        },
       },
     },
     "android.emu.debug": {
@@ -96,12 +116,22 @@ module.exports = {
       artifacts: {
         rootDir: "artifacts/android-emu-debug",
       },
+      testRunner: {
+        args: {
+          config: "e2e/jest.android.config.js",
+        },
+      },
     },
     "android.emu.release": {
       device: "emulator",
       app: "android.release",
       artifacts: {
         rootDir: "artifacts/android-emu-release",
+      },
+      testRunner: {
+        args: {
+          config: "e2e/jest.android.config.js",
+        },
       },
     },
   },

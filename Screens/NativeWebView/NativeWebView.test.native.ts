@@ -1,3 +1,5 @@
+import { by, device, expect, element } from "detox";
+
 describe("NativeWebView", () => {
   beforeEach(async () => {
     await device.launchApp({

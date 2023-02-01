@@ -1,11 +1,10 @@
 /** @type {import('@jest/types').Config.InitialOptions} */
+
+// Specific config ran in detoxrc which only searches for native and ios tests
+
 module.exports = {
   rootDir: "..",
-  testMatch: [
-    "<rootDir>/**/*.test.native.ts",
-    "<rootDir>/**/*.test.android.ts",
-    "<rootDir>/**/*.test.ios.ts",
-  ],
+  testMatch: ["<rootDir>/**/*.test.native.ts", "<rootDir>/**/*.test.ios.ts"],
   testTimeout: 120000,
   maxWorkers: 1,
   globalSetup: "detox/runners/jest/globalSetup",
