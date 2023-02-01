@@ -26,7 +26,7 @@ The aim of this project is to see exactly what expo bare minimum can do.
 
 **Note: If the app doesn't build, you may need to link the Native Modules again. Follow the linking instructions below**
 
-## Linking
+## Expo Module Linking
 
 Follow these steps if the app doesn't build with the Native Modules after a yarn.
 
@@ -47,7 +47,7 @@ To run Detox tests simply open two terminals in the root folder. Then:
 
 **Note: If you have different Simulators/AVD setup edit the .detoxrc file to specify that. Currently we expect iPhone 14 Pro & Pixel 4 to be open.**
 
-## File Naming
+### File Naming
 
 - To get testing to work we have speific jest configs for android/ios which we then use when we run the npm scripts. These configs allow us to name tests as `[filename].test.ios.ts` or `[filename].test.android.ts` or even `[filename].test.native.ts`.
 - To test the entire app before a PR you should:
@@ -55,7 +55,7 @@ To run Detox tests simply open two terminals in the root folder. Then:
     - eg: Run `npx expo run:ios` then `npm run detox-ios-debug` then press `a` to launch Android then run `npm run detox-android-debug`.
     - This approach will run all iOS tests on a iOS simulator, all android tests on an AVD and also will run the shared tests on both devices also.
 
-## Routing
+### Routing
 
 - Since we use Expo-Router, to test we must route to the screen we want before we perform any assertions. To do this do the following:
   - if on an iOS specific test, in `beforeEach` use `openURL({ url: "myapp://[route]})` route being the page you want to navigate to.
