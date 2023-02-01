@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity, Platform } from "react-native";
 import { Link } from "expo-router";
 import { H5, P } from "@expo/html-elements";
 import * as LocalAuthentication from "expo-local-authentication";
@@ -35,7 +35,7 @@ const Home = ({ didLogin }: HomeScreenProps) => {
 
   return (
     <View style={defaultStyles.container}>
-      {isAuthenticated ? (
+      {isAuthenticated || Platform.OS === "android" ? (
         <>
           <Link href="/banking/Account">
             <View style={styles.button}>
