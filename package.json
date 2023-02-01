@@ -8,7 +8,9 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "detox-ios-debug": "detox test --configuration ios.sim.debug --take-screenshots failing",
-    "detox-ios-release": "detox test --configuration ios.sim.release --take-screenshots failing"
+    "detox-ios-release": "detox test --configuration ios.sim.release --take-screenshots failing",
+    "detox-android-debug": "detox test --configuration android.emu.debug --take-screenshots failing",
+    "detox-android-release": "detox test --configuration android.emu.release --take-screenshots failing"
   },
   "overrides": {
     "metro": "0.73.7",

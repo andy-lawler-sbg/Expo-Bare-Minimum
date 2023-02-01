@@ -1,10 +1,9 @@
 describe("Banking", () => {
-  beforeAll(async () => {
-    await device.launchApp();
-  });
-
   beforeEach(async () => {
-    await device.openURL({ url: "myapp://banking/Account" });
+    await device.launchApp({
+      newInstance: true,
+      url: "myapp://banking/Account",
+    });
   });
 
   afterEach(async () => {

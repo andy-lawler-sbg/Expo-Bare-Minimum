@@ -7,6 +7,10 @@ describe("HomeScreen", () => {
     await device.reloadReactNative();
   });
 
+  afterEach(async () => {
+    await device.reloadReactNative();
+  });
+
   it("should show login button and text", async () => {
     await expect(element(by.id("LoginButton"))).toBeVisible();
     await expect(

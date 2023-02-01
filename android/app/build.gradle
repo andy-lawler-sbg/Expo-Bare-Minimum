@@ -148,6 +148,8 @@ android {
         versionCode 1
         versionName "1.0"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+        testBuildType System.getProperty('testBuildType', 'debug')
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
         if (isNewArchitectureEnabled()) {
             // We configure the CMake build only if you decide to opt-in for the New Architecture.
@@ -235,6 +237,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            proguardFile "${rootProject.projectDir}/../node_modules/detox/android/detox/proguard-rules-app.pro"
         }
     }
 
@@ -252,6 +255,21 @@ android {
 
         }
     }
+
+    packagingOptions {
+	    pickFirsts = [
+	        "lib/**/libc++_shared.so",
+            "lib/**/libreactnativejni.so",
+            "lib/**/libreact_nativemodule_core.so",
+            "lib/**/libglog.so",
+            "lib/**/libjscexecutor.so",
+            "lib/**/libfbjni.so",
+            "lib/**/libfolly_json.so",
+            "lib/**/libfolly_runtime.so",
+            "lib/**/libhermes.so",
+            "lib/**/libjsi.so",
+        ]
+	}
 }
 
 // Apply static values from `gradle.properties` to the `android.packagingOptions`
@@ -275,6 +293,9 @@ android {
 }
 
 dependencies {
+    androidTestImplementation('com.wix:detox:+')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     //noinspection GradleDynamicVersion

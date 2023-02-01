@@ -1,10 +1,9 @@
 describe("NativeWebView", () => {
-  beforeAll(async () => {
-    await device.launchApp();
-  });
-
   beforeEach(async () => {
-    await device.openURL({ url: "myapp://web/ExpoSearch" });
+    await device.launchApp({
+      newInstance: true,
+      url: "myapp://web/ExpoSearch",
+    });
   });
 
   afterEach(async () => {
