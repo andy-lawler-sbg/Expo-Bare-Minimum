@@ -1,7 +1,18 @@
 /** @type {import('@jest/types').Config.InitialOptions} */
-import { ModuleDefaults, TestMatchers } from "./ModuleDefaults";
+
+// Specific config ran in detoxrc which only searches for native and android tests
 
 module.exports = {
-  testMatch: [TestMatchers.android, TestMatchers.native],
-  ...ModuleDefaults,
+  rootDir: "..",
+  testMatch: [
+    "<rootDir>/**/*.test.native.ts",
+    "<rootDir>/**/*.test.android.ts",
+  ],
+  testTimeout: 120000,
+  maxWorkers: 1,
+  globalSetup: "detox/runners/jest/globalSetup",
+  globalTeardown: "detox/runners/jest/globalTeardown",
+  reporters: ["detox/runners/jest/reporter"],
+  testEnvironment: "detox/runners/jest/testEnvironment",
+  verbose: true,
 };

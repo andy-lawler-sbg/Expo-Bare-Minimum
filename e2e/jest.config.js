@@ -1,7 +1,16 @@
 /** @type {import('@jest/types').Config.InitialOptions} */
-import { ModuleDefaults, TestMatchers } from "./ModuleDefaults";
-
 module.exports = {
-  testMatch: [TestMatchers.ios, TestMatchers.android, TestMatchers.native],
-  ...ModuleDefaults,
+  rootDir: "..",
+  testMatch: [
+    "<rootDir>/**/*.test.native.ts",
+    "<rootDir>/**/*.test.android.ts",
+    "<rootDir>/**/*.test.ios.ts",
+  ],
+  testTimeout: 120000,
+  maxWorkers: 1,
+  globalSetup: "detox/runners/jest/globalSetup",
+  globalTeardown: "detox/runners/jest/globalTeardown",
+  reporters: ["detox/runners/jest/reporter"],
+  testEnvironment: "detox/runners/jest/testEnvironment",
+  verbose: true,
 };
