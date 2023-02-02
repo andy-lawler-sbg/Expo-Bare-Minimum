@@ -2,12 +2,15 @@ import { View } from "react-native";
 import * as Components from "../../components";
 import { Stack, useSearchParams } from "expo-router";
 import styles from "./[component].styles";
+import React, { useEffect, useState } from "react";
 
 const TestComponent = () => {
   const { component } = useSearchParams();
-
-  // @ts-ignore
+  const [isReady, setIsReady] = useState<boolean | null>(null);
   const DynamicComponent = Components[component];
+
+  useEffect(() => (component ? setIsReady(true) : setIsReady(false)));
+
   return (
     <>
       <Stack.Screen
@@ -17,7 +20,7 @@ const TestComponent = () => {
         }}
       />
       <View style={styles.container}>
-        <DynamicComponent />
+        {isReady ? <DynamicComponent /> : null}
       </View>
     </>
   );
