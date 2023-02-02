@@ -26,7 +26,7 @@
     "expo-linking": "~3.3.0",
     "expo-local-authentication": "~13.0.2",
     "expo-modules-core": "~1.0.4 || ~1.1.1",
-    "expo-router": "^1.0.0-rc2",
+    "expo-router": "*",
     "expo-settings": "file:../expo-settings",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",

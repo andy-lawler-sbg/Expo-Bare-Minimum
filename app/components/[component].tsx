@@ -1,11 +1,10 @@
 import { View } from "react-native";
 import * as Components from "../../components";
 import { Stack, useSearchParams } from "expo-router";
+import styles from "./[component].styles";
 
 const TestComponent = () => {
-  const params = useSearchParams();
-  const { component } = params;
-
+  const { component } = useSearchParams();
   // @ts-ignore
   const DynamicComponent = Components[component];
   return (
@@ -16,7 +15,7 @@ const TestComponent = () => {
           headerStyle: { backgroundColor: "#ba64d9" },
         }}
       />
-      <View>
+      <View style={styles.container}>
         <DynamicComponent />
       </View>
     </>
