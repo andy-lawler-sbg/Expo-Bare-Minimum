@@ -6,7 +6,7 @@ This folder holds the jest config files which are used to run Detox tests within
 
 ### Config
 
-Below is an example of one of the config files. The main difference between each config file is the `testMatch` array. For the main `jest.config.js` file we look for `.test.native.ts`, `.test.ios.ts` and `.test.android.ts` files. For the specific configs we simply remove the device we do not want tests to run on. ie: we do not look for `.test.android.ts` files when running iOS tests.
+Below is an example of one of the config files. The main difference between each config file is the `testMatch` array. For the main `jest.config.js` file we look for `.test.native.ts`, `.test.ios.ts` and `.test.android.ts` files. For the specific configs we simply remove the device we do not want tests to run on. ie: we do not look for `.test.android.ts` files when running iOS tests. To simplify this we have seperated all shared logic into a `ModuleDefaults` object and we also have a `TestMatchers` object. This means we are able to create a module by simply setting the testMatch array and then using the rest of the defaults.
 
 Below is an example showing testMatch.
 
@@ -18,7 +18,13 @@ module.exports = {
     "<rootDir>/**/*.test.android.ts",
     "<rootDir>/**/*.test.ios.ts",
    ],
-   ...
+  testTimeout: 120000,
+  maxWorkers: 1,
+  globalSetup: "detox/runners/jest/globalSetup",
+  globalTeardown: "detox/runners/jest/globalTeardown",
+  reporters: ["detox/runners/jest/reporter"],
+  testEnvironment: "detox/runners/jest/testEnvironment",
+  verbose: true,
 }; -->
 
 ### Configuration Links
