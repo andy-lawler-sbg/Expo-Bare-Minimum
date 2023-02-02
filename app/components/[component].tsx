@@ -19,9 +19,7 @@ const TestComponent = () => {
           headerStyle: { backgroundColor: "#ba64d9" },
         }}
       />
-      <View style={styles.container}>
-        {isReady ? <DynamicComponent /> : null}
-      </View>
+      <View style={styles.container}>{isReady && <DynamicComponent />}</View>
     </>
   );
 };
