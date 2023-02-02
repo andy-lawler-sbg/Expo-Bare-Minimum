@@ -2,7 +2,7 @@ import { View, Text, ActivityIndicator } from "react-native";
 import { LoadingViewProps } from "./LoadingView.types";
 import styles from "./LoadingView.styles";
 
-const LoadingView = ({ isLoading, testID }: LoadingViewProps) => {
+export const LoadingView = ({ isLoading, testID }: LoadingViewProps) => {
   if (!isLoading) {
     return null;
   }
@@ -18,5 +18,3 @@ const LoadingView = ({ isLoading, testID }: LoadingViewProps) => {
     </View>
   );
 };
-
-export default LoadingView;

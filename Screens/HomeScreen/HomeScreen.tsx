@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { View, TouchableOpacity, Platform, Image } from "react-native";
 import { H5, P } from "@expo/html-elements";
 import * as LocalAuthentication from "expo-local-authentication";
-import LinkButton from "../../components/LinkButton/LinkButton";
-import Spacer from "../../components/Spacer/Spacer";
+import { LinkButton } from "../../components/LinkButton/LinkButton";
+import { Spacer } from "../../components";
 
 import { styles as defaultStyles } from "../../utils";
 import styles from "./HomeScreen.styles";
@@ -64,6 +64,13 @@ const Home = ({ didLogin }: HomeScreenProps) => {
             testID="ExpoSearchButton"
             bgColor="blue"
             text="Go to Native Web View"
+          />
+          <Spacer />
+          <LinkButton
+            href="/components/Testing"
+            testID="TestingLinkButton"
+            bgColor="green"
+            text="Go to Dynamic Route"
           />
         </View>
       ) : (

@@ -1,6 +1,4 @@
 import { View } from "react-native";
 import styles from "./Spacer.styles";
 
-const Spacer = () => <View style={styles.container} />;
-
-export default Spacer;
+export const Spacer = () => <View style={styles.container} testID="Spacer" />;

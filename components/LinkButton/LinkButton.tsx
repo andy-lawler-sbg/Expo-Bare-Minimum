@@ -4,7 +4,12 @@ import { P } from "@expo/html-elements";
 import { ButtonProps } from "./LinkButton.types";
 import styles from "./LinkButton.styles";
 
-const LinkButton = ({ href, testID, bgColor = "pink", text }: ButtonProps) => {
+export const LinkButton = ({
+  href,
+  testID,
+  bgColor = "pink",
+  text,
+}: ButtonProps) => {
   return (
     <Link href={href} testID={testID}>
       <View style={[styles.button, { backgroundColor: bgColor }]}>
@@ -13,5 +18,3 @@ const LinkButton = ({ href, testID, bgColor = "pink", text }: ButtonProps) => {
     </Link>
   );
 };
-
-export default LinkButton;

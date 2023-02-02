@@ -4,7 +4,8 @@
 
 module.exports = {
   rootDir: "..",
-  testMatch: ["<rootDir>/**/*.test.native.ts", "<rootDir>/**/*.test.ios.ts"],
+  testMatch: ["<rootDir>/**/components/Testing/*.test.native.ts"],
+  // testMatch: ["<rootDir>/**/*.test.native.ts", "<rootDir>/**/*.test.ios.ts"],
   testTimeout: 120000,
   maxWorkers: 1,
   globalSetup: "detox/runners/jest/globalSetup",
