@@ -12,22 +12,21 @@ const data: AccountRow[] = [
 ];
 
 const Banking = () => (
-    <View style={styles.container}>
-      <H2>Transactions</H2>
-      <FlatList
-        style={{ margin: 20 }}
-        data={data}
-        renderItem={({ item }) => {
-          return (
-            <P>
-              {item.id}: ${item.price}
-            </P>
-          );
-        }}
-        keyExtractor={(item) => item.id}
-      />
-    </View>
-  );
-};
+  <View style={styles.container}>
+    <H2>Transactions</H2>
+    <FlatList
+      style={{ margin: 20 }}
+      data={data}
+      renderItem={({ item }) => {
+        return (
+          <P>
+            {item.id}: ${item.price}
+          </P>
+        );
+      }}
+      keyExtractor={(item) => item.id}
+    />
+  </View>
+);
 
 export default Banking;
