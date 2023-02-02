@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { View, TouchableOpacity, Platform } from "react-native";
+import { View, TouchableOpacity, Platform, Image } from "react-native";
 import { H5, P } from "@expo/html-elements";
 import * as LocalAuthentication from "expo-local-authentication";
 import LinkButton from "../../components/LinkButton/LinkButton";
@@ -37,7 +37,15 @@ const Home = ({ didLogin }: HomeScreenProps) => {
   return (
     <View style={defaultStyles.container}>
       {isAuthenticated || Platform.OS === "android" ? (
-        <View>
+        <View style={styles.loginContainer}>
+          <Image
+            source={
+              Platform.OS === "android"
+                ? require("../../assets/GooglePlay.png")
+                : require("../../assets/Apple.png")
+            }
+            style={styles.image}
+          />
           <LinkButton
             href="/banking/Account"
             testID="AccountButton"

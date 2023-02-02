@@ -19,4 +19,9 @@ export default StyleSheet.create({
     width: 120,
     height: 30,
   },
+  image: {
+    width: 50,
+    height: 50,
+    margin: 20,
+  },
 });
