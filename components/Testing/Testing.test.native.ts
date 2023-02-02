@@ -1,18 +1,14 @@
 import { by, device, expect, element } from "detox";
+import { RenderComponent } from "../../e2e/RenderComponent";
 
-describe("NativeWebView", () => {
+describe("Testing", () => {
   beforeEach(async () => {
-    await device.launchApp({
-      newInstance: true,
-      url: "myapp://components/Testing",
-    });
+    await RenderComponent("Testing");
   });
 
   afterEach(async () => {
     await device.reloadReactNative();
   });
-
-  // Needs accessibilityIdentifier being added to the native web view as `NativeWebView.webView`
 
   it("should render a testing component", async () => {
     await expect(element(by.id("TestingView"))).toBeVisible();
