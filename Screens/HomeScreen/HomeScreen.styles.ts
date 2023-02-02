@@ -17,7 +17,7 @@ export default StyleSheet.create({
     backgroundColor: "blue",
     borderRadius: 20,
     width: 120,
-    height: 30,
+    height: 45,
   },
   image: {
     width: 50,
