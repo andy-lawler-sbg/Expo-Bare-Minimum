@@ -15,6 +15,8 @@ describe("NativeWebView", () => {
   // Needs accessibilityIdentifier being added to the native web view as `NativeWebView.webView`
 
   it("should render a testing component", async () => {
+    await expect(element(by.id("TestingView"))).toBeVisible();
     await expect(element(by.text("Hello World"))).toBeVisible();
+    await expect(element(by.id("TestingView.image"))).toBeVisible();
   });
 });

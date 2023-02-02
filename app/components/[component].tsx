@@ -5,6 +5,7 @@ import styles from "./[component].styles";
 
 const TestComponent = () => {
   const { component } = useSearchParams();
+
   // @ts-ignore
   const DynamicComponent = Components[component];
   return (
