@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { View, TouchableOpacity, Platform } from "react-native";
-import { Link } from "expo-router";
 import { H5, P } from "@expo/html-elements";
 import * as LocalAuthentication from "expo-local-authentication";
+import LinkButton from "../../components/LinkButton/LinkButton";
+import Spacer from "../../components/Spacer/Spacer";
 
 import { styles as defaultStyles } from "../../utils";
 import styles from "./HomeScreen.styles";
@@ -36,34 +37,38 @@ const Home = ({ didLogin }: HomeScreenProps) => {
   return (
     <View style={defaultStyles.container}>
       {isAuthenticated || Platform.OS === "android" ? (
-        <>
-          <Link href="/banking/Account" testID="AccountButton">
-            <View style={styles.button}>
-              <P style={styles.buttonText}>Go to Bank</P>
-            </View>
-          </Link>
-          <View style={{ margin: 5 }} />
-          <Link href="/theming/NativeFunctions" testID="NativeFunctionsButton">
-            <View style={[styles.button, { backgroundColor: "red" }]}>
-              <P style={styles.buttonText}>Go to Native Module</P>
-            </View>
-          </Link>
-          <View style={{ margin: 5 }} />
-          <Link href="/web/ExpoSearch" testID="ExpoSearchButton">
-            <View style={[styles.button, { backgroundColor: "blue" }]}>
-              <P style={styles.buttonText}>Go to Native Web View</P>
-            </View>
-          </Link>
-        </>
+        <View>
+          <LinkButton
+            href="/banking/Account"
+            testID="AccountButton"
+            text="Go to Bank"
+          />
+          <Spacer />
+          <LinkButton
+            href="/theming/NativeFunctions"
+            testID="NativeFunctionsButton"
+            bgColor="red"
+            text="Go to Native Module"
+          />
+          <Spacer />
+          <LinkButton
+            href="/web/ExpoSearch"
+            testID="ExpoSearchButton"
+            bgColor="blue"
+            text="Go to Native Web View"
+          />
+        </View>
       ) : (
-        <>
+        <View style={styles.loginContainer}>
           <H5>Please login by pressing the button below</H5>
-          <TouchableOpacity onPress={onAuthenticate} testID="LoginButton">
-            <View style={styles.buttonContainer}>
-              <P style={styles.buttonText}>Login</P>
-            </View>
+          <TouchableOpacity
+            onPress={onAuthenticate}
+            testID="LoginButton"
+            style={styles.loginButtonContainer}
+          >
+            <P style={styles.loginButtonText}>Login</P>
           </TouchableOpacity>
-        </>
+        </View>
       )}
     </View>
   );

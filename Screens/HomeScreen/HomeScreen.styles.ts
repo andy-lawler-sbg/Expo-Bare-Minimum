@@ -1,23 +1,22 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  button: {
-    backgroundColor: "pink",
-    height: 50,
-    width: 200,
-    borderRadius: 10,
-    alignItems: "center",
+  loginContainer: {
+    flex: 1,
     justifyContent: "center",
+    alignItems: "center",
   },
-  buttonText: {
+  loginButtonText: {
     color: "white",
     fontWeight: "bold",
     marginVertical: 0,
+    textAlign: "center",
   },
-  buttonContainer: {
+  loginButtonContainer: {
+    justifyContent: "center",
     backgroundColor: "blue",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
     borderRadius: 20,
+    width: 120,
+    height: 30,
   },
 });
