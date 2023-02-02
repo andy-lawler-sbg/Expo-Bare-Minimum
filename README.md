@@ -38,6 +38,23 @@ Follow these steps if the app doesn't build with the Native Modules after a yarn
   expo-settings
 - Link the module by going into each module folder and run `npm link`. Then in the `ExpoBare` folder run `npm link module_name` eg: npm link expo-web-view. Then inside ExpoBare run `yarn` again.
 
+## Flipper
+
+This project is setup so that Flipper works out of the box. To install Flipper simply use `brew install --cask flipper`. To use Flipper, run the app using `npx expo run:ios` or `npx expo run:android` and then open Flipper. Once open, select the Simulator/AVD and App from the menu in the top left of Flipper. You then should see the plugins available to you. You may notice some plugins are available but disabled, simply tap the `+` symbol to enable those.
+
+Flipper should work with both the AVD and iOS Simulator and should allow you to see things such as:
+
+- Layout preview (Native Stack showing RCTViews and also Native Views)
+- Console logging
+- Shared Preferences (UserDefaults and file stores)
+  - This works especially well with the Native Functions demo with iOS launched. You can see the event logs within this plugin when we change our stored theme in UserDefaults.
+- Images (Android Only)
+- Database (Android Only)
+
+Things such as React-Dev Tools should also work so we can work on getting that integrated.
+
+Another cool benefit of Flipper is that we can add Plugins for other metrics and usages as we need them!
+
 ## Testing
 
 To run Detox tests simply open two terminals in the root folder. Then:
