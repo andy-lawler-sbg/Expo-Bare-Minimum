@@ -9,9 +9,10 @@ export const LinkButton = ({
   testID,
   bgColor = "pink",
   text,
+  a11y,
 }: ButtonProps) => {
   return (
-    <Link href={href} testID={testID}>
+    <Link href={href} testID={testID} accessibilityLabel={a11y}>
       <View style={[styles.button, { backgroundColor: bgColor }]}>
         <P style={styles.buttonText}>{text}</P>
       </View>

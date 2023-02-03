@@ -5,4 +5,5 @@ export type ButtonProps = {
   testID: string;
   bgColor?: ColorValue;
   text: string;
+  a11y?: string;
 };

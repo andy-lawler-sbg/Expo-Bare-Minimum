@@ -17,8 +17,13 @@ const NativeWebView = () => {
   const testID = "NativeWebView";
 
   return (
-    <View style={styles.container} testID={testID}>
+    <View
+      style={styles.container}
+      testID={testID}
+      accessibilityLabel="Native Web View Container"
+    >
       <TextInput
+        accessibilityLabel="Native Web View Text Input"
         testID={`${testID}.textInput`}
         value={inputUrl}
         onChangeText={setInputUrl}
@@ -34,7 +39,7 @@ const NativeWebView = () => {
         style={styles.textInput}
       />
       <WebView url={inputUrl} setLoading={setLoadingState} />
-      <LoadingView isLoading={isLoading} />
+      <LoadingView isLoading={isLoading} testID="WebViewLoader" />
     </View>
   );
 };

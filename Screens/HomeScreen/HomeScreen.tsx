@@ -39,6 +39,7 @@ const Home = ({ didLogin }: HomeScreenProps) => {
       {isAuthenticated || Platform.OS === "android" ? (
         <View style={styles.loginContainer}>
           <Image
+            accessibilityLabel="Platform Image"
             source={
               Platform.OS === "android"
                 ? require("../../assets/GooglePlay.png")
@@ -50,6 +51,7 @@ const Home = ({ didLogin }: HomeScreenProps) => {
             href="/banking/Account"
             testID="AccountButton"
             text="Go to Bank"
+            a11y="Account Button"
           />
           <Spacer />
           <LinkButton
@@ -57,6 +59,7 @@ const Home = ({ didLogin }: HomeScreenProps) => {
             testID="NativeFunctionsButton"
             bgColor="red"
             text="Go to Native Module"
+            a11y="Native Functions Button"
           />
           <Spacer />
           <LinkButton
@@ -64,6 +67,7 @@ const Home = ({ didLogin }: HomeScreenProps) => {
             testID="ExpoSearchButton"
             bgColor="blue"
             text="Go to Native Web View"
+            a11y="Expo Search Button"
           />
           <Spacer />
           <LinkButton
@@ -71,6 +75,7 @@ const Home = ({ didLogin }: HomeScreenProps) => {
             testID="TestingLinkButton"
             bgColor="green"
             text="Go to Dynamic Route"
+            a11y="Dynamic Link Button"
           />
         </View>
       ) : (
@@ -80,6 +85,7 @@ const Home = ({ didLogin }: HomeScreenProps) => {
             onPress={onAuthenticate}
             testID="LoginButton"
             style={styles.loginButtonContainer}
+            accessibilityLabel="Login Button"
           >
             <P style={styles.loginButtonText}>Login</P>
           </TouchableOpacity>

@@ -12,7 +12,7 @@ const data: AccountRow[] = [
 ];
 
 const Banking = () => (
-  <View style={styles.container}>
+  <View style={styles.container} accessibilityLabel="Bank Account Container">
     <H2>Transactions</H2>
     <FlatList
       style={{ margin: 20 }}

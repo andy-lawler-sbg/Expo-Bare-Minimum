@@ -28,7 +28,10 @@ const NativeSystemTheme = () => {
   const nextTheme = theme === "dark" ? "light" : "dark";
 
   return (
-    <View style={styles.container}>
+    <View
+      style={styles.container}
+      accessibilityLabel="Native Functions Container"
+    >
       <Text>Theme: {Settings.getTheme()}</Text>
       <Button title={`Set theme to ${nextTheme}`} onPress={updateTheme} />
     </View>
