@@ -78,3 +78,11 @@ To run Detox tests simply open two terminals in the root folder. Then:
   - if on an iOS specific test, in `beforeEach` use `openURL({ url: "myapp://[route]})` route being the page you want to navigate to.
     - Be sure to add a `beforeAll` with the default `launchApp()` comamnd to launch the simulator.
 - if on a native test (both platforms) or Android specific test instead in `beforeAll` use `launchApp({ url: "myapp://[route]})`. This is due to `openURL({ url: url })` causing issues on Android.
+
+### Component [Testing]
+
+- Using Detox to test components is something which isn't heavily documented. For this to work, we have created a component screen which we can host any component in.
+  - This component screen is not accessible via the app in any way currently so the user cannot reach it via any buttons, but us as developers can route to it.
+  - Using a dynamic route simple route to `myapp://components/ComponentName` in any tests. To make this easier, a helper method has been created. So at the beginning of a test suite, in the `beforeEach` method simply call `await RenderComponent(ComponentName)` and you will navigate to that component to test it.
+
+**Note: You currently cannot pass props to the RenderComponent, this is something we are working on.**
