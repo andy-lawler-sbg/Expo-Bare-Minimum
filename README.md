@@ -2,15 +2,24 @@
 
 This project uses the bare minimum workflow and has some expo packages & other libraries imported.
 
-At the moment we have:
+## Features
 
-- Expo-Router
-- Expo-HTML-Elements
-- Expo-Local-Authentication
-- Expo Native Modules (both functions & views)
+At the momemnt this project has a few features
+
+- Expo-Router Integration
+- Expo-HTML-Elements Integraton
+- Expo-Local-Authentication Integration
+- Expo Native Modules
+  - Native Functions w/ React-Native View
+  - Native Web View w/ bridge to allow url to be passed from React Native
 - Detox
-- Jest
-- Typescript
+  - Test running for Both screens and Components on Simulators
+  - Npm scripts to run tests & save screenshots on failure to ./artifacts folder
+  - Component testing works by using a dynamic route to test any component
+- Jest for running tests
+- Typescript Integration for components and tests
+- Flipper integration
+  - Currently supports the out of the box plugins on Flipper for both iOS and Android
 
 The aim of this project is to see exactly what expo bare minimum can do.
 
