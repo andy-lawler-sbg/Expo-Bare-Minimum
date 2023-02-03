@@ -86,3 +86,42 @@ To run Detox tests simply open two terminals in the root folder. Then:
   - Using a dynamic route simple route to `myapp://components/ComponentName` in any tests. To make this easier, a helper method has been created. So at the beginning of a test suite, in the `beforeEach` method simply call `await RenderComponent(ComponentName)` and you will navigate to that component to test it.
 
 **Note: You currently cannot pass props to the RenderComponent, this is something we are working on.**
+
+## App Screenshots
+
+This is what the app currently looks like with a few different screenshots of all the screens.
+
+### Login & Auth
+
+- Expo-Local-Authentication
+
+![Login Screenshot](/assets/Screenshots/Login.png "Login").
+![Auth Screenshot](/assets/Screenshots/Auth.png "Auth").
+
+### Welcome Page
+
+![Logged In Screenshot](/assets/Screenshots/LoggedIn.png "Logged In").
+
+#### Bank Account
+
+- Uses Expo HTML Elements
+
+![Bank Screenshot](/assets/Screenshots/ExpoHTMLElements.png "Bank Account").
+
+#### Native Functions
+
+- Uses Expo Module which contains Native Functions
+
+![Native Functions Screenshot](/assets/Screenshots/NativeFunctions.png "Native Functions").
+
+#### Native View (Web View)
+
+- Uses Expo Module which contains a Native Web View
+
+![Native Web View Screenshot](/assets/Screenshots/NativeWebView.png "Native Web View").
+
+#### Dynamic Routing
+
+- Uses dynamic routing to present any component via it's string name
+
+![Dynamic Routing Screenshot](/assets/Screenshots/DynamicRouting.png "Dynamic Routing").
