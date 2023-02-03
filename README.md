@@ -95,7 +95,8 @@ This is what the app currently looks like with a few different screenshots of al
 
 - Expo-Local-Authentication
 
-![Login Screenshot](/assets/Screenshots/Login.png | width=100)
+<img src="/assets/Screenshots/Login.png" width="100">
+
 ![Auth Screenshot](/assets/Screenshots/Auth.png "Auth")
 
 ### Welcome Page
