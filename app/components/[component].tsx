@@ -4,9 +4,10 @@ import { Stack, useSearchParams } from "expo-router";
 import styles from "./[component].styles";
 import React, { useEffect, useState } from "react";
 
-const TestComponent = () => {
-  const { component } = useSearchParams();
+const ComponentHost = () => {
   const [isReady, setIsReady] = useState<boolean | null>(null);
+
+  const { component } = useSearchParams();
   const DynamicComponent = Components[component];
 
   useEffect(() => (component ? setIsReady(true) : setIsReady(false)));
@@ -15,7 +16,7 @@ const TestComponent = () => {
     <>
       <Stack.Screen
         options={{
-          title: component,
+          title: `Host: ${component}`,
           headerStyle: { backgroundColor: "#ba64d9" },
         }}
       />
@@ -24,4 +25,4 @@ const TestComponent = () => {
   );
 };
 
-export default TestComponent;
+export default ComponentHost;
