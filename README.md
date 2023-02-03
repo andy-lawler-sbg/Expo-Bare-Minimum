@@ -1,10 +1,12 @@
 # Expo Bare Minimum Project
 
-This project uses the bare minimum workflow and has some expo packages & other libraries imported.
+## Introduction
 
-## Features
+This project uses the bare minimum workflow and has some expo packages & other libraries imported. The aim of this project is to see the limitations and benefits of using a bare workflow project.
 
-At the momemnt this project has a few features
+### Features
+
+At the moment this project has a few features:
 
 - Expo-Router Integration
 - Expo-HTML-Elements Integraton
@@ -21,7 +23,9 @@ At the momemnt this project has a few features
 - Flipper integration
   - Currently supports the out of the box plugins on Flipper for both iOS and Android
 
-The aim of this project is to see exactly what expo bare minimum can do.
+### Todo
+
+- We need a way to pass props via a url when we test using Detox. Currently we can just render screens who do not have any props, or screens that have props with default values. We need to be able to pass props and mock easily.
 
 ## Installation
 
