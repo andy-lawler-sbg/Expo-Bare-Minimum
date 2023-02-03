@@ -20,6 +20,11 @@ The aim of this project is to see exactly what expo bare minimum can do.
 - You will also need access to the Native Modules repo's to build this. They are private so request access:
   - https://github.com/andy-lawler-sbg/expo-web-view
   - https://github.com/andy-lawler-sbg/expo-settings
+    - Make sure this (ExpoBare) repository is stored locally in a folder and make sure both `expo-web-view` & `expo-settings` are in the same folder eg:
+      - MainFolder/
+        - ExpoBare/
+        - expo-web-view/
+        - expo-settings/
 - Run `yarn`
 - Run `npx pod-install`
 - Run `npx expo start` to then pick what device to use.
@@ -31,12 +36,7 @@ The aim of this project is to see exactly what expo bare minimum can do.
 Follow these steps if the app doesn't build with the Native Modules after a yarn.
 
 - Delete `yarn.lock` `package.lock` `node_modules`
-- Make sure this repository is stored locally in a folder and make sure both `expo-web-view` & `expo-settings` are in the same folder eg:
-  MainFolder/
-  ExpoBare/
-  expo-web-view
-  expo-settings
-- Link the module by going into each module folder and run `npm link`. Then in the `ExpoBare` folder run `npm link module_name` eg: npm link expo-web-view. Then inside ExpoBare run `yarn` again.
+- Link the module by going into each module (expo-settings & expo-web-view) folder and run `npm link`. Then in the `ExpoBare` folder run `npm link module_name` eg: `npm link expo-web-view`. Then inside ExpoBare run `yarn` again.
 
 ## Flipper
 
