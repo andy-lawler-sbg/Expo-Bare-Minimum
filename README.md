@@ -95,33 +95,33 @@ This is what the app currently looks like with a few different screenshots of al
 
 - Expo-Local-Authentication
 
-![Login Screenshot](/assets/Screenshots/Login.png "Login").
-![Auth Screenshot](/assets/Screenshots/Auth.png "Auth").
+![Login Screenshot](/assets/Screenshots/Login.png | width=100)
+![Auth Screenshot](/assets/Screenshots/Auth.png "Auth")
 
 ### Welcome Page
 
-![Logged In Screenshot](/assets/Screenshots/LoggedIn.png "Logged In").
+![Logged In Screenshot](/assets/Screenshots/LoggedIn.png "Logged In")
 
 #### Bank Account
 
 - Uses Expo HTML Elements
 
-![Bank Screenshot](/assets/Screenshots/ExpoHTMLElements.png "Bank Account").
+![Bank Screenshot](/assets/Screenshots/ExpoHTMLElements.png "Bank Account")
 
 #### Native Functions
 
 - Uses Expo Module which contains Native Functions
 
-![Native Functions Screenshot](/assets/Screenshots/NativeFunctions.png "Native Functions").
+![Native Functions Screenshot](/assets/Screenshots/NativeFunctions.png "Native Functions")
 
 #### Native View (Web View)
 
 - Uses Expo Module which contains a Native Web View
 
-![Native Web View Screenshot](/assets/Screenshots/NativeWebView.png "Native Web View").
+![Native Web View Screenshot](/assets/Screenshots/NativeWebView.png "Native Web View")
 
 #### Dynamic Routing
 
 - Uses dynamic routing to present any component via it's string name
 
-![Dynamic Routing Screenshot](/assets/Screenshots/DynamicRouting.png "Dynamic Routing").
+![Dynamic Routing Screenshot](/assets/Screenshots/DynamicRouting.png "Dynamic Routing")
